@@ -1,5 +1,3 @@
-// Напиши скрипт со следующим функционалом:
-
 // При загрузке страницы пользователю предлагается в prompt ввести число.
 // Ввод сохраняется в переменную input и добавляется в массив чисел numbers.
 // Операция ввода числа пользователем и сохранение в массив продолжается до тех пор,
@@ -14,6 +12,22 @@
 // после чего снова пользователю предлагается ввести число в prompt.
 
 let input;
-input = prompt("Enter number");
 const numbers = [];
 let total = 0;
+
+do {
+  input = prompt("Введите число");
+  const modifiedInput = Number(input);
+  if (isNaN(modifiedInput) === true) {
+    alert("Было введено не число, попробуйте еще раз");
+  } else if (isNaN(modifiedInput) === false && input !== null) {
+    numbers.push(modifiedInput);
+  }
+} while (input !== null);
+
+for (const number of numbers) {
+  total += number;
+}
+if (numbers.length > 0) {
+  console.log(`'Общая сумма чисел равна ${total}`);
+}
