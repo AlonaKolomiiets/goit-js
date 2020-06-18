@@ -34,5 +34,3 @@ console.log(
   )
 );
 // вернется форматированная строка
-
-// return string.split(" ").splice(41, "...").join(" ");
