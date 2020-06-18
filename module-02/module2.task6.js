@@ -20,7 +20,11 @@ do {
   const modifiedInput = Number(input);
   if (isNaN(modifiedInput) === true) {
     alert("Было введено не число, попробуйте еще раз");
-  } else if (isNaN(modifiedInput) === false && input !== null) {
+  } else if (
+    isNaN(modifiedInput) === false &&
+    input !== null &&
+    input.length > 0
+  ) {
     numbers.push(modifiedInput);
   }
 } while (input !== null);
