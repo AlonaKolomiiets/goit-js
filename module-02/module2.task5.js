@@ -6,11 +6,14 @@
 
 const checkForSpam = function (message) {
   // твой код
-
-  return (
-    message.toLowerCase().includes("sale") ||
-    message.toLowerCase().includes("spam")
-  );
+  const Lowermessage = message.toLowerCase();
+  const stopWords = ["sale", "spam"];
+  for (const word of stopWords) {
+    if (Lowermessage.includes(word)) {
+      return true;
+    }
+  }
+  return false;
 };
 
 /*
