@@ -9,7 +9,6 @@ const input = document.getElementById("name-input");
 const span = document.getElementById("name-output");
 
 function updateSpan() {
-  debugger;
   const name = input.value;
   if (name.length > 0) {
     span.innerText = name;
