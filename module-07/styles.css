@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list-links {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.list-links_item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.list-links_link {
+  color: blue;
+  text-transform: uppercase;
+}
