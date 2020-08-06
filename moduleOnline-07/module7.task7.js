@@ -6,12 +6,12 @@
 //<br />
 //<span id="text">Абракадабра!</span>
 
-const range = document.querySelector("input#font-size-control");
-const text = document.getElementById("text");
+const range = document.querySelector("#font-size-control");
+const text = document.querySelector("#text");
 
-function updateSpan() {
+const updateSpan = () => {
   const value = range.value;
   text.style.fontSize = `${value}px`;
-}
+};
 
 range.addEventListener("input", updateSpan);

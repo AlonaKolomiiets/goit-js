@@ -23,11 +23,11 @@ const ingredients = [
   "Зелень",
   "Приправы",
 ];
-const htmlIngridients = [];
-for (const ingridient of ingredients) {
-  const li = document.createElement("li");
-  li.textContent = ingridient;
-  htmlIngridients.push(li);
-}
 
-document.querySelector("ul#ingredients").append(...htmlIngridients);
+const ingredientsList = ingredients.map((ingredient) => {
+  const newIngredients = document.createElement("li");
+  newIngredients.textContent = ingredient;
+  return newIngredients;
+});
+
+document.querySelector("#ingredients").append(...ingredientsList);

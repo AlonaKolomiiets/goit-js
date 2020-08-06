@@ -27,11 +27,9 @@ const images = [
   },
 ];
 
-const parent = document.querySelector("ul#gallery");
-let innerHtml = "";
+const createArrayLies = images.map((image) => {
+  return `<li><img src="${image.url}" alt="${image.alt}"/> </li>`;
+});
 
-for (const image of images) {
-  innerHtml += `<li><img alt="${image.alt}" src="${image.url}"/></li>`;
-}
-console.log(innerHtml);
-parent.insertAdjacentHTML("afterbegin", innerHtml);
+const gallery = document.querySelector("#gallery");
+gallery.insertAdjacentHTML("afterbegin", createArrayLies.join(""));

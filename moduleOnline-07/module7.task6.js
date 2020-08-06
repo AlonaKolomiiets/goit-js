@@ -24,17 +24,15 @@
 //   border-color: #f44336;
 // }
 
-const input = document.getElementById("validation-input");
+const input = document.querySelector("#validation-input");
 
-function checkLength() {
+const checkLength = () => {
   const requiredLength = Number(input.getAttribute("data-length"));
   const realLength = input.value.length;
   input.classList.remove("invalid", "valid");
-  if (requiredLength !== realLength) {
-    input.classList.add("invalid");
-  } else {
-    input.classList.add("valid");
-  }
-}
+  requiredLength !== realLength
+    ? input.classList.add("invalid")
+    : input.classList.add("valid");
+};
 
 input.addEventListener("blur", checkLength);

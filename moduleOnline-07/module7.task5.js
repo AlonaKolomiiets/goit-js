@@ -8,13 +8,13 @@
 const input = document.getElementById("name-input");
 const span = document.getElementById("name-output");
 
-function updateSpan() {
+const updateSpan = () => {
   const name = input.value;
   if (name.length > 0) {
     span.innerText = name;
   } else {
     span.innerText = "незнакомец";
   }
-}
+};
 
 input.addEventListener("input", updateSpan);
